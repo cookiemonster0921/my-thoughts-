@@ -1,6 +1,4 @@
-var x = document.getElementById('about')
-x.style.color = 'green'
-
+console.log('was')
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.visited) {
     localStorage.visited = Number(localStorage.visited)+1;

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
       }
-   }).catch(error =? {
+   }).catch(error => {
     console.log(error)
   }
 })

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <script src='script.js' defer></script>
+    <script src='contact.js' defer></script>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        } 
+        #submit:hover {
+            background-color:  lightcoral;
+        }
+        #submit {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>contact/about</h1>
+        <p>sharing the skibidi sigma vibes</p>
+    </header>
+    <nav>
+        <a href="/index.html">Homepage</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <article>
+        <h2>hey champs, heres my contact page</h2>
+        <p>not entirely sure why i have a contact page but like lots of websites have it so i see no reason why not lol 😝 </p>
+        <h2>join my discord server!!!</h2>
+        <p>link: ___</p>
+        <h2>dump some stuff here</h2>
+        <form id='form'>
+            <label>Name: (or put whatever u want lol)</label><br>
+            <input id='name' required><br>
+            <label>Your contact details so i can reply (email, insta, discord etc...)</label><br>
+            <input id='contact' required><br>
+            <label>Message here (write whatever but feedback is hella appreciated 0_0)</label><br>
+            <textarea id='message' required></textarea><br>
+            <input id='submit' type='submit'>
+        </form>
+    </article>
+</body>
+</html>

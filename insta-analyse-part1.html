@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysing Instagram Data (part 1)</title>
+    <script src='tracking.js' defer></script>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        img {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Graphing Instagram likes and comments on posts to see the trends on my posts visually (part 1)</h1>
+        <p>sharing the skibidi sigma vibes</p>
+    </header>
+    <nav>
+        <a href="https://cookiemonster0921.github.io/my-thoughts-/">Homepage</a>
+        <a href="https://cookiemonster0921.github.io/my-thoughts-/contact.html">Contact</a>
+    </nav>
+    <article>
+       <i>this felt like hacking but it isn't</i>
+        <h2>Going through past Instagram posts to get a short term ego boost that will dissipate in a matter of seconds</h2>
+        <p> I was going through my old Instagram posts trying to how many people liked my posts. I went through even the ones in the archive (OMG I COMPLETELY FORGOT I HAD LIKE 20 ARCHIVED POSTS BACK THERE GATHERING DUST -_-). I needed an ego boost (who doesnt like a good ego boost? If you don't you're probably lying).  </p>
+        <br>
+        <p>And then I was like ----------> why not graph the data of my instagram post trends? (all for the ego boost of course)</p>
+        <h3>There were a few benefits to this: </h3>
+        <ol>
+            <li>Using intense mental gymnastics, and systematically ignoring all the possible disadvantages, I could spend much more time looking at my old likes and comments without guilt. </li>
+            <li>I would list out all the possible disadvantages but as I said in the previous point I ignored it. Those possible disadvantages were ignored just like friction is ignored in physics problems 💀
+</li>
+            <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/1.png'><br>
+            <i>Poor friction. So disrespected :(</i>
+            <li>Improving problem solving and creativity (this one is a no 🧠 brainer) </li>
+            <li>I can actually produce a *neat* graph -- I am highly messy drawing mathematical graphs (shaky hand and terrible coordination worst enemies frfr) </li>
+            <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/2.png'><br>
+            <i>-- Teachers grading me on readability be like --</i>
+        </ol>
+        <h2>getting started (not procrastinate and scroll reels or something)</h2>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/3.png'>
+        <p>You log onto instagram.com. The default login page asks for your username and password. You blindly give it to them to access the content that will eventually give you brainrot. The first post on the page is the source of brainrot: skibidi slay sigma type of stuff 🤔</p>
+        <p>Your friend, at the same time also blindly gives his password and username to instagram.com. But the first post on the page was a fresh out of the oven cooking video, emanating the intense heat vibes to their eyes.</p>
+        <h3>unbelievable</h3>
+        <h4>how come he gets to see delcious food while I have to hear people chanting 'sigma' over and over again? (this actually happened lol)</h4>
+        <p>It's the same website but the content is different. The website is a dynamic website which changes content every time you reload. (imagine scrolling through mindlessly until you click the reload button. The relatable meme you were about to send to your best friend is now gone forever.) </p>
+        <h2>step 1: data doesnt just appear on the page, it comes from somewhere</h2>
+        <p>How does the browser know what to display? Surely all the brainrot instagram reels cannot be all stored in one file? </p>
+        <p>Well the website needs a little help in displaying the data so it has to fetch the data from another source. Think of a dog fetching a bone from another source to make the full nostalgic picture of a happy dog wagging its tail with a bone in its mouth. Good little doggy.</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/4.png'>
+        <h2>step 2: well where then?</h2>
+        <p>well snooping around the page won't get you anywhere. You have to go deeper</p>
+        <p>Here's a magic trick: go into right click and inspect elements</p>
+        <img>
+        <p>Now you can see al the code that makes it work. A giant chunk of messy html blows up in your face. Not cool. How can you find all the data now?</p>
+        <p>Well the interesting part is the network tab. Shows all the network requests being sent and teh data being transferred. Think of it as a busy metro station with the trains as data packets and stuff. </p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/7.png'>
+        <p>And then after looking through all the hard to read scripts in there, </p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/8.png'>
+        <p>all the boring html, </p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/9.png'>
+        <p>I found this interesting section</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/10.png'>
+        <h3>Fetch/XHR: The source of the data river (probably)</h3>
+        <p>All external data is sent to and from servers here. By looking through the requests you can find lots of interesting stuff the website gets from servers, or what it sends. Most of the time though it looks like gibberish.</p>
+        <h2>step 3: scrolling through instagram (productively)</h2>
+        <p>In order to find where the server gets the data, I had to scroll through a ____lot____ of network requests :) Forget scrolling through memes and reels, lets scroll through network requests !!!!</p>
+        <p>Eventually after *hours* of searching I found this: </p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/11.png'>
+        <p>The chosen one</p>
+        <h2>step 3: i got the data, now what</h2>
+        <p>Now we need to figure out how we can get it through programming methods</p>
+        <h3>introducing:::: postman - not the one on the motorcyle (as if we see them anymore) but the one online that makes metaphorical data deliveries to your virtual mailbox</h3> 
+        <h2>step 4: roleplay as instagram.com</h2>
+        <p>time to pretend to be like a drama student with the roleplay</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/12.png''>
+        <p>This sends a request to instagram just like how the browser sends a request for data. Had to match exactly how the request is made in the network tab; including copying what seems like the most trivial of metadata OMG THAT WAS A PAINSTAKING PROCESS</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/13.png''>
+        <p>At this point, I could go on and on about how I got here, my thought process and everything that I have tried. But I know you didn't order a yappachino so moving on 💬</p>
+        <h2>step 5: python</h2>
+        <p>Copy the python version of the postman request and boom -- you've got yourself a script that fetches instagram data :)</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/14.png'>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/15.png'>
+        <p>Now all that is left until the next step is to get rid of the unneccesary data until you're left with the data about the posts, likes and comments</p>
+        <h2>step 6: non messy graphing </h2>
+        <p>It's graphing time.</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/16.png'>
+        <p>Set x values as post numbers, y values as likes and comments respectively and boom</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/17.png'>
+        <h2>step 7: graph done WOOHOO</h2>
+        <p>thank you so much for reading this article, my goats </p>
+        <p>Hopefully this was not a bunch of waffle, and if I was yapping too much let me know so I can submit an application to become the waffle house's new host :)</p>
+    </article>
+</body>
+</html>

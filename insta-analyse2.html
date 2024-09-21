@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysing Instagram Data (part 2)</title>
+    <script src='tracking.js' defer></script>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        img {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Graphing how many times people liked my posts in Instagram (part 2)</h1>
+        <p>sharing the skibidi sigma vibes</p>
+    </header>
+    <nav>
+        <a href="https://cookiemonster0921.github.io/my-thoughts-/">Homepage</a>
+        <a href="https://cookiemonster0921.github.io/my-thoughts-/contact.html">Contact</a>
+    </nav>
+    <article>
+        <i>This is part 2 of a series. If you are reading this and it feels whoa out of context I will kindly direct you back to part 1. <a href='https://cookiemonster0921.github.io/my-thoughts-/insta-analyse-part1.html'>click here:</a></i><br><br><br>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/1.png'>
+        <br>
+        <br>
+        <h1>After the long, hard journey of scrolling through a never ending feed of network requests, painstakingly extracting all the juicy, mouthwatering data and generating my totally *slay* graph, I did what every normal person would do- post it on Instagram, where my epic journey all started. </h1>
+        <h2>I know, its a very circular narrative structure, for the english nerds out there ;)</h2>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse1/17.png'><br>
+        <i>The graph that made it all worthwhile :)</i>
+        <p>And when I posted it and it reached its terminal like count (by guessing, around 30), my friends told me that they liked my post irl. That was a great ego boost but like -> did they really like it? And as you can see from the graph, I have 10 posts. Every time I post, the next day, people would say "omg that was so good i totally fr fr liked all ur posts" or <i> something like that</i> (memories can be faulty). But did they really though? As you can see from the crystal clear data, my likes were fluctuating, just like a normal teenage moodswing. </p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/2.png'>
+        <h1>step 8: but wait......................................................................................................... there's more</h1>
+        <h2>If my likes are not consistent, but people say that my posts were good, does this mean that it must be the same people saying that it was good? (I cant remember manually if it were the same people. I post posts with some time apart and it is hard to remember who said what lol). But that's not the point. </h2>
+        <h1>The new idea</h1>
+        <p>The point was, I had a new idea, one that I could expand on, which is why you are seeing a part 2 of this mini series. And if I have another crazy idea, you would see a part 3. But that's for next time, sometime in the near or far future.</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/3.png'>
+        <p>What if I could get the number of times each person in my friends/followers list had liked my posts? I could do this manually of course, if I were to click on more details of each post, and scrolled down, I would see who exactly liked my post. Let the Liking Games begin, where the winner has pressed that juicy like button the most.  </p><br>
+        <p>What a good way to incite friendly competition amongst friends. Instead of a potentially heated argument or a fierce running race where I would certainly be out of breath after a few futile minutes, I could simply flash the undeniable, concrete data to prove who was the real winner. </p>
+        <h1>step 9: MORE NETWORK REQUESTS </h1>
+        <p>In order to find out which people *specifically* liked my posts, I had to follow the holy grail of data collecting,  /again/. Scrolling through network requests to find out the source of the giant stream of data which powers everything.  </p><br>
+        <p>I'm going to decrease the level of yap for the moment, so you can enjoy this giant list of pictures showing the process of gathering data ---for the second time if you have already viewed the first article---</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/4.png'>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/5.png'>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/6.png'>
+        <img>
+        <img>
+        <p>The old saying -- "A picture is a thousand words" is very much relevant here, so I hope you enjoyed reading the 3x1000 word academic essay. (cue round of applause).</p>
+        <h1>yap machine is rebooting => beep => beep => beep</h1>
+        <img>
+        <p>anyway</p>
+        <br>
+        <p>Now I have all the data, I can finally arrange them into a desired format, to, ya know, easier convey the biiig flex across. </p>
+        <h1>step 10: roleplaying as instagram (again -_-)</h1>
+        <p>same old, same old process of using postman to test requests</p>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/7.png'>
+        <p>then repeating the same process in python. Well somewhat similar. As the feature of getting how many times friends liked posts is not exactly provided in the obvious way unlike just getting likes and comments from instagram. I could just go onto a post and check the like number but in order to find who liked it, and calculating (adding it up) for all posts, is a whole different story.</p>
+       
+        <p>This code right here does a few things</p>
+        <ol>
+            <li>it chucks a request at a nicely named url endpoint 'likers', conveniently indicating what i was looking for- people that liked</li>
+            <li>the code above gathers extremely necessary data related to be able to get the necessary data, gets the 'pk' of each of the posts; although i like to think it means 'pookie' used in 'pookie bear' it more likely means 'primary key', used to identify record in databases. BORING but neccessary.</li>
+             <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/8.png'>
+            <img>
+            <li>when looking at it you can see everyone that liked the post, and their usernames</li>
+            <li>Going through much of the /likers endpoint for different posts there are some similarities of who appears in the data. This means that one person liked multiple posts.</li>
+            <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/9.png'>
+
+            <li>Thus going through the all the /likers endpoint for each of the, and gathering data from the response of each endpoint and storing it in a dictionary format (key:value structure) was a good option.</li>
+            <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/10.png'>
+            <li>And thus, the graphing.</li>
+        </ol>
+        <h1>step 11: making another graphing monstrosity that math teachers would hate with a burning passion</h1>
+        <img>
+        <i>adding neccessary axis labels, letting the computer know what data to put where etc... (neccessary admin stuff)</i>
+        <h2> and now the monstrosity</h2>
+        <img src='https://cookiemonster0921.github.io/my-thoughts-/images/insta-analyse2/11.png'>
+        <p>zoom in if you don't want to spend the day looking at the numbers</p>
+        <h1>step 12: possible use cases/consequences?</h1>
+        <p>Well all these steps were used on my account but if I wanted to I could also use it on other people's accounts and grab some visualised data not offered natively in Instagram.</p>
+        <h2>but why, do u seriously have to graph every single piece of data there is</h2>
+        <p>idk but like </p>
+        <br>
+        <ol>
+           <li>it looks cool 😎 (undeniably) </li> 
+            <li>its a weird flex 💪 -- while everyone else is showing cool pics of their dog on instagram, their rave times on parties or tropical cool beaches im just standing awkwardly like == "umm i dont exactly go anywhere 'fun' cuz im a couchworm but here check out this messy, barely legible graph i made of your instagram data 📊 🤷🤷🤷"</li><br>
+            <li>also it can start like a friendly rivalry -- heres a short roleplay <br>
+            <p>me: hey person a, check out this graph on how much times others liked your posts</p><br>
+            <p>person a: thanks bro, interesting (<i>looks intently at the graph, making sure to squint eyes due to the tiny font size</i>) ...... OMG PERSON B ONLY LIKED MY POSTS 8 OUT OF 10 TIMES!!!!!@#!@$#$# I THOUGHT THEY WERE MY BEST FRIEND!@#!@$@##!@$#%% (<b>cue intense crying noises</b>)</p>
+            <p>person b: omg bro r u ok?</p>
+            <p>person a: OMG U SAID U LIKED ALL MY INSTAGRAM POSTS BUT YOU DIDNT YOU GODDAMN LIAR!!!</p>
+            <p>person c: (<i><b>silently</b> appearing from nowhere </i>) heyyy would you look at that, i liked your posts 10 times :)</p>
+            <p>person a: thanks buddy, ur my new best friend now, just ignore the fact that i knew person b for like 10 years while i only know u for like 10 days or something</p>
+            <h4>and here, new rivalries are born, wars are started and injustices are created</h4>
+            <h5>hehehehehe</h5>
+            </li>
+            
+        </ol>
+        <h4>"knowledge is power"</h4>
+        <h3>but what is more powerful is</h3>
+        <h2>visualising knowledge in a (somewhat) readable way</h2>
+        <h1>skibidi goat signing off</h1>
+    </article>
+</body>
+</html>

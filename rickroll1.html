@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rickrolling part 1 (creatively)</title>
+    <script src="tracking.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      img {
+        max-width: 600px;
+      }
+      video {
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Creative ways to rickroll (part 1)</h1>
+      <p>sharing the skibidi sigma -- no, rickrolling vibes</p>
+    </header>
+    <nav>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Homepage</a>
+      <a href="https://cookiemonster0921.github.io/my-thoughts-/contact.html"
+        >Contact</a
+      >
+    </nav>
+    <article>
+      <h1>a blast from the past</h1>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/1.png"
+      />
+      <h2>
+        You all know rickrolling to be some kind of annoying prank where someone
+        sends you a video of "Never gonna give you up" by Rick Astley in an
+        unexpected way, with them being silently snickering with an evil grin
+        while you cringe at the video/audio/lyrics/whatever.
+      </h2>
+      <p>That needs no explanation.</p>
+      <h3>
+        So without further ado please forgive me (or not) while I show you a
+        hopefully creative way of rickrolling that you can use to annoy the heck
+        out of your friends while potentially impressing them at the same time.
+        (while also trying to rickroll you as much times as I possibly can.
+        Gotta get my dopamine hits from the rickrolling in. You have been
+        warned.)
+      </h3>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/2.png"
+      />
+      <br />
+      <br />
+      <br />
+      <h1>Introduction</h1>
+      <p>
+        So why bother with this? Why make a super technical fancy way of
+        rickrolling when you can... you know... shove a link to the music video.
+      </p>
+      <br />
+      <p>Like this</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        >please click this link. PLEASE IM BEGGING YOU</a
+      >
+      <p>
+        or even better, shove the rickroll into your face with this cool embed
+      </p>
+      <iframe
+        width="600"
+        height="799"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Rick Astley - Never Gonna Give You Up (Official Music Video)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <h4>gottem</h4>
+      <p>
+        As you can see these types of rickrolls happen very often. Assuming you
+        dont live under a rock you would probably be very annoyed and cautious
+        of links *innocuously* sent in conversations
+      </p>
+      <br />
+      <p>
+        So lets change it up a bit. Bring in some new reactions of a mixture of
+        awe, more intense annoyance, and the thought of "WHAT THE HECK BRO SPENT
+        2 HOURS (or so) ON THIS FANCY ASS METHOD TO RICKROLL ME
+        WHYYYYYYYYYY!!@#!@$!@#@$@#"
+      </p>
+      <h1>sneaky sneaky</h1>
+      <p>
+        When someone visits a webpage most of the attention is diverted to the
+        content of the page, 90% (roughly) of the screen. Which is fair enough,
+        it is shoved in our faces most of the time. There is a very small chance
+        that we pay any meaningful attention to the top part of the web browser,
+        where all the tabs are displayed. After all we only look at it when we
+        are about to switch tabs. And even so, if you have a trillion tabs open
+        like I do, you tend to look at the icons of the images instead of the
+        actual page title.
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/3.png"
+      />
+      <p>
+        This makes putting a potential rickroll at the page title a very very
+        sneaky way to rickroll someone. Think about it, they could be browsing
+        the page, for a long time, not even realizing they are being rickrolled.
+        And when they change the tab they are going to see the song and facepalm
+        in frustration.
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/4.png"
+      />
+      <br />
+      <h1>html title</h1>
+      <p>
+        In order to set the title of the page, there is a very convenient <
+        title > element in html. If you are a computer nerd that enjoys looking
+        at the "behind the scenes" of a website you will see the title of the
+        page that looks somewhat like this:
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/5.png"
+      />
+      <p>
+        So wouldn't it be interesting if we just manipulated it in a way. Say
+        wouldnt it be interesting to have all the lyrics displayed on the title?
+        (obviously can't put a video though I wish I could)
+      </p>
+      <h1>the javascript</h1>
+      <p>
+        Javascript is the language that makes websites interactive. So let's get
+        out there and change the title through that.
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/6.png"
+      />
+      <h2>the list</h2>
+      <p>
+        First we gotta put the lyrics in the code. This is self explanatory,
+        otherwise how would the browser know what to display on the title? By
+        putting the lyrics in an javascript array, we can loop through the
+        lyrics and display each line of the lyrics onto the title.
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/7.png"
+      />
+      <p>well hopefully you looked at the list and got rickrolled :)</p>
+      <h2>the interval</h2>
+      <p>
+        If we were do to a normal while loop through the list and changed the
+        title to every line of the lyrics it would go so fast we wouldn't be
+        able to effectively read the lyrics as it would be going way too fast.
+        Computers are super fast at running through loops and processing data in
+        general, which is how they are so good at calculations. Which is why we
+        need to let the computer know that it should /slow down/. It needs to
+        wait for us to read the title fully before displaying the next set of
+        the lyrics. In other words, it should bend down and smell the
+        metaphorical flowers, and take a chill pill.
+      </p>
+      <br />
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/8.png"
+      />
+      <p>
+        Here we are setting the computer up to run the function to change the
+        title (more on that later) every 1000 milliseconds, or 1 second. That
+        should be long enough for you to read one line of the lyrics. If not, it
+        will likely confuse you, causing you to look at the title changes more,
+        only to be slapped with the sinking realisation that you just got
+        rickrolled.
+      </p>
+      <h2>the function</h2>
+      <p>
+        We set the document title programatically through document.title ,
+        setting it to be the first element of my rickrolling lyrics list.
+        Starting from 0, the 0th element if you will, as for some odd reason the
+        computer counts from 0 instead of 1 (i mean you can count from any
+        number but like in hide and seek do you really go "alright in -1.5,
+        -1.4, -1.3... ready set go here i come"?)
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/9.png"
+      />
+      <p>
+        Every second we increase the index of the list by 1, so we move to
+        showing the next line of the lyrics.
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/10.png"
+      />
+      <p>
+        And once we reach the end of the list (the 54th element i think) we go
+        back to the beginning and we rickroll them once again.
+      </p>
+      <h1>the final result</h1>
+      <h2>look up to the title at the top of the page..... i dare you 😈</h2>
+      <p>And <b>Don't tell me you're too blind to see</b> it</p>
+      <br />
+      <br />
+      <br />
+      <h1>Rickroll "Extreme Version"</h1>
+      <p>
+        Ok so this rickroll is extremely effective... if you own the website.
+        This requires you to be able to edit the code and add that little
+        rickrolling script.
+      </p>
+      <p>
+        But if you don't own the website there's nothing you can do. It's not as
+        if you can like open up the code and inject that script... right? Or is
+        there another way?
+      </p>
+      <h1>Rickrolling through a browser extension</h1>
+      <p>
+        Browser extensions can do a lot of stuff. In fact there's a giant list
+        of what features one could code into a browser extension.
+      </p>
+      <a href="https://developer.chrome.com/docs/extensions/reference/api"
+        >click here. I pinky promise this is not a rickroll.</a
+      >
+      <p>
+        However a key feature of browser extensions is the ability to modify the
+        appearance of web pages. Any web pages on your browser. You see where
+        we're headed with this right?
+      </p>
+      <p>
+        Imagine a browser extension that modifies the titles of every webpage in
+        the window to display the rickroll lyrics. You could be innocently
+        sharing your screen with a friend and direct your mouse to the top of
+        the screen, leading for all the tabs to rickroll them in unison.
+      </p>
+      <p>Well my friend you won't have to imagine that anymore.</p>
+      <h2>the folder with the manifesto</h2>
+      <p>
+        In order to make our own *custom* browser extension, we need to have a
+        folder with all the files, and the file we must have is the manifest
+        file -- manifest.json. (but i like to think of it as a manifesto e.g. a
+        communist manifesto. dont ruin my moment).
+      </p>
+      <img
+        src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/11.png"
+      />
+      <p>
+        The manifest document contains lots of information regarding the browser
+        extensions, such as permissions, title, the author and injected scripts.
+      </p>
+      <h2>the content script</h2>
+      <p>
+        A content script modifies the content of every page when installed onto
+        a browser extension. We can put our title modifying code into the
+        content script.
+        <img
+          src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/12.png"
+        />
+      </p>
+      <h2>uploading it</h2>
+      <p>
+        Lastly we upload the finished folder into the browser extension settings
+        page, while making sure to enable developer mode (cuz we're nerds).
+      </p>
+      <h1>the result</h1>
+      <p>
+        Just look at this chaos. Every page is transformed into a rickrolling
+        menace. You could innocently be sitting near a friend and subtly hover
+        your mouse to the top of the screen, rickrolling anyone who dares look,
+        just like how Medusa turned everyone who dared look to stone.
+      </p>
+      <video controls>
+        <source
+          src="https://cookiemonster0921.github.io/my-thoughts-/images/rickroll1/video.webm"
+          type="video/mp4"
+        />
+      </video>
+      <p>You can rest assured that the code will <b> never let you down</b></p>
+      <p>It will <b>never give you up</b></p>
+      <p>
+        And as <b>A full commitment's what I'm thinking of</b>, there will be a
+        part 2, so you can get rickrolled for another time.
+      </p>
+      <p>*laughs evilly*</p>
+    </article>
+
+    <script>
+      let title = document.title;
+      const lyricsArray = [
+        "We're no strangers to love",
+        "You know the rules and so do I (do I)",
+        "A full commitment's what I'm thinking of",
+        "You wouldn't get this from any other guy",
+        "I just wanna tell you how I'm feeling",
+        "Gotta make you understand",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+        "We've known each other for so long",
+        "Your heart's been aching, but you're too shy to say it (say it)",
+        "Inside, we both know what's been going on (going on)",
+        "We know the game and we're gonna play it",
+        "And if you ask me how I'm feeling",
+        "Don't tell me you're too blind to see",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+        "We've known each other for so long",
+        "Your heart's been aching, but you're too shy to say it (to say it)",
+        "Inside, we both know what's been going on (going on)",
+        "We know the game and we're gonna play it",
+        "I just wanna tell you how I'm feeling",
+        "Gotta make you understand",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+        "Never gonna give you up",
+        "Never gonna let you down",
+        "Never gonna run around and desert you",
+        "Never gonna make you cry",
+        "Never gonna say goodbye",
+        "Never gonna tell a lie and hurt you",
+      ];
+      let lyricnum = 0;
+      function rickroll() {
+        document.title = lyricsArray[lyricnum];
+        console.log(lyricsArray[lyricnum]);
+        lyricnum += 1;
+        if (lyricnum == lyricsArray.length) {
+          lyricnum = 0;
+        }
+      }
+      const intervalID = setInterval(rickroll, 1000);
+      //you get rickrolled every 1000 milliseconds :)
+    </script>
+  </body>
+</html>
